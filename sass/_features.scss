@@ -1,0 +1,23 @@
+.features{
+    grid-column: center-start / center-end;
+
+    margin: 15rem 0;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // grid-template-rows: auto auto; //By default it set to this value
+    grid-gap: 6rem;
+}
+
+.feature{
+
+    &__icon{
+        fill: $color-primary;
+        width: 4.5rem;
+        
+    }
+
+    &__text{
+        font-size: 1.7rem;
+    }
+}
