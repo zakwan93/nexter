@@ -2,19 +2,28 @@
     grid-column: center-start / center-end;
 
     margin: 15rem 0;
-
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // grid-template-columns: repeat(3, 1fr); //For destop version or any one device this works totally fine
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); //This is for mobile-responsive layout
+
     // grid-template-rows: auto auto; //By default it set to this value
     grid-gap: 6rem;
+    align-items: start;
 }
 
 .feature{
 
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+
     &__icon{
         fill: $color-primary;
         width: 4.5rem;
-        
+        height: 4.5rem;
+        grid-row: 1 / span 2;
+        transform: translateY(-1rem);
     }
 
     &__text{
