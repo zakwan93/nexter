@@ -10,6 +10,20 @@
         grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
         grid-gap: 2rem;
         align-items: center;
+        align-content: center;
+        justify-items: center;
+
+        @media only screen and (max-width: $bp-small){
+            grid-template-columns: 1fr;
+        }
+
+        &__item:not(:last-child){
+            @media only screen and (max-width: $bp-small){
+                border-bottom: 1px solid rgba($color-grey-light-2, .2);
+                width: 70%;
+                
+            }
+        }
 
         &__link:link,
         &__link:visited{
