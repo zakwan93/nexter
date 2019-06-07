@@ -403,7 +403,16 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   grid-gap: 2rem;
-  align-items: center; }
+  align-items: center;
+  align-content: center;
+  justify-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .nav {
+      grid-template-columns: 1fr; } }
+  @media only screen and (max-width: 37.5em) {
+    .nav__item:not(:last-child) {
+      border-bottom: 1px solid rgba(170, 170, 170, 0.2);
+      width: 70%; } }
   .nav__link:link, .nav__link:visited {
     font-size: 1.2rem;
     color: #fff;
